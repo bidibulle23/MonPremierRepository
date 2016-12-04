@@ -1,4 +1,4 @@
-ProcÈdure ‡ suivre :
+Proc√©dure √† suivre :
 
 Installer et d√©marrer MongoDB 3.2
 =================================
