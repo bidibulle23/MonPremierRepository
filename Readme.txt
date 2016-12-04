@@ -1,3 +1,5 @@
+Proc�dure � suivre :
+
 Installer et démarrer MongoDB 3.2
 =================================
 Définir le répertoire de votre base MongoDB : <Répertoire Database> (ex : créer le répertoire C:\Temp\data) et exécuter :
