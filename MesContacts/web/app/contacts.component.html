@@ -1,0 +1,21 @@
+<h2>Mes Contacts</h2>
+<div>
+  <label>Contact firstName:</label><input #contactFirstName />
+  <label>Contact lastName:</label><input #contactLastName />
+  <button (click)="add(contactFirstName.value, contactLastName.value); contactFirstName.value=''; contactLastName.value=''">Add</button>
+</div>
+<ul class="contacts">
+  <li *ngFor="let contact of contacts"
+    (click)="onSelect(contact)"
+	[class.selected]="contact === selectedContact">
+    <!-- span class="badge">{{contact.id}}</span -->
+    <span class="badge">{{contact.lastName}}&nbsp;{{contact.firstName}}</span>
+    <button class="delete" (click)="delete(contact); $event.stopPropagation()">x</button>
+  </li>
+</ul>
+<div *ngIf="selectedContact">
+  <h2>
+    {{selectedContact.firstName | uppercase}} is my selected contact
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
