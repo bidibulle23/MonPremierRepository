@@ -1,15 +1,15 @@
-package fr.ddoumeng.mescontacts;
+package fr.ddoumeng.mescontacts.repositories;
 
 import java.util.List;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.repository.query.Param;
-import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-@RepositoryRestResource(collectionResourceRel = "people", path = "people")
+import fr.ddoumeng.mescontacts.domain.Person;
+
+//@RepositoryRestResource(path = "persons")
 public interface PersonRepository extends MongoRepository<Person, String> {
 
 	List<Person> findByLastName(@Param("name") String name);
-	List<Person> findByPhoneNumber(@Param("phoneNumber") String phoneNumber);
 
 }
