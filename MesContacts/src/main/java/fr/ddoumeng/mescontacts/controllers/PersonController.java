@@ -1,6 +1,7 @@
 package fr.ddoumeng.mescontacts.controllers;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import javax.annotation.Resource;
@@ -35,7 +36,7 @@ public class PersonController {
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	public Person getPersonById(@PathVariable(value = "id") String id) {
-   		return this.personService.getPersonById(id);
+		return this.personService.getPersonById(id);
 	}
 
 	@RequestMapping(method = RequestMethod.POST)

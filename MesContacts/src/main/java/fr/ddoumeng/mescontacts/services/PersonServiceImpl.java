@@ -22,7 +22,7 @@ public class PersonServiceImpl implements PersonService {
 
 	@Override
 	public Person getPersonById(String id) {
-		return this.personRepository.findOne(id);
+		return this.personRepository.findById(id).get();
 	}
 
 	@Override
@@ -37,7 +37,7 @@ public class PersonServiceImpl implements PersonService {
 
 	@Override
 	public void deletePerson(String id) {
-		this.personRepository.delete(id);
+		this.personRepository.deleteById(id);
 
 	}
 
